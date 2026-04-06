@@ -1,0 +1,26 @@
+.shell { display: flex; min-height: 100vh; }
+.main  { margin-left: 220px; flex: 1; padding: 32px 36px; max-width: calc(100vw - 220px); }
+
+.topbar { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.title  { font-family: var(--font-d); font-size: 28px; font-weight: 500; color: var(--text1); display: flex; align-items: baseline; gap: 12px; }
+.titleItalic  { font-style: italic; color: var(--amber); }
+.titleDivider { font-size: 16px; color: var(--text3); font-family: var(--font-s); font-weight: 300; }
+.titleSub     { font-size: 16px; color: var(--text2); font-family: var(--font-s); font-weight: 400; }
+.subtitle     { font-size: 13px; color: var(--text2); margin-top: 4px; }
+.topbarRight  { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.dateBadge    { background: var(--card); border: 1px solid var(--border2); border-radius: 8px; padding: 8px 14px; font-size: 12px; color: var(--text2); font-family: var(--font-m); }
+
+.periodSelector { display: flex; background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.periodBtn      { padding: 7px 14px; font-size: 12px; font-weight: 500; color: var(--text2); cursor: pointer; border: none; background: none; font-family: var(--font-s); transition: all 0.15s; }
+.periodBtn:hover { color: var(--text1); }
+.periodActive   { background: var(--amber); color: #111; border-radius: 6px; }
+
+.chartsRow  { display: grid; grid-template-columns: 1fr 360px; gap: 16px; margin-bottom: 28px; }
+.bottomRow  { display: grid; grid-template-columns: 380px 1fr; gap: 16px; margin-bottom: 36px; }
+
+.sectionHeading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+.sectionTitle   { font-family: var(--font-d); font-size: 20px; font-weight: 500; color: var(--text1); }
+.sectionSub     { font-size: 12px; color: var(--text3); }
+
+@media (max-width: 1300px) { .chartsRow, .bottomRow { grid-template-columns: 1fr; } }
+@media (max-width: 768px)  { .main { margin-left: 0; padding: 20px 16px; max-width: 100vw; } }

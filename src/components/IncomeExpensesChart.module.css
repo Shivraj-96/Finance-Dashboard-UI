@@ -1,0 +1,7 @@
+.stats { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.stat { text-align: center; }
+.statLabel { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.statValue { font-family: var(--font-m); font-size: 15px; font-weight: 500; }
+.legend { display: flex; gap: 16px; margin-bottom: 14px; }
+.legendItem { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); }
+.legendDot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }

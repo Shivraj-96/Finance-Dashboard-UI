@@ -1,0 +1,49 @@
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  transition: background 0.25s ease;
+  border: 1px solid var(--border2);
+}
+
+.dark {
+  background: rgba(245, 166, 35, 0.15);
+}
+
+.light {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
+}
+
+.dark .thumb {
+  background: var(--amber);
+  color: #1a1200;
+  transform: translateX(20px);
+}
+
+.light .thumb {
+  background: var(--blue);
+  color: white;
+  transform: translateX(0);
+}

@@ -1,0 +1,93 @@
+/* ─── Global Animation Utilities ──────────────────────────────────────────────
+   Import this file in your main index.css or App.module.css.
+   All panels, cards, and rows get subtle entrance animations.
+─────────────────────────────────────────────────────────────────────────────── */
+
+/* ── Keyframes ─────────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Panel entrance ────────────────────────────────────────────────────────── */
+.panel {
+  animation: fadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger each panel in a row */
+.panel:nth-child(1) { animation-delay: 0ms; }
+.panel:nth-child(2) { animation-delay: 60ms; }
+.panel:nth-child(3) { animation-delay: 120ms; }
+.panel:nth-child(4) { animation-delay: 180ms; }
+
+/* ── Summary cards ─────────────────────────────────────────────────────────── */
+/* Applied via SummaryCards.module.css .card rule — add animation there */
+
+/* ── Table rows ────────────────────────────────────────────────────────────── */
+.txn-row {
+  animation: fadeIn 0.25s ease both;
+}
+
+/* ── Hover lift on interactive panels ─────────────────────────────────────── */
+.panel {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.panel:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+/* ── Number counter animation (JS-driven, CSS prep) ───────────────────────── */
+.count-up {
+  display: inline-block;
+  animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Sidebar nav items ─────────────────────────────────────────────────────── */
+.nav-item-enter {
+  animation: slideRight 0.2s ease both;
+}
+
+/* ── Modal ─────────────────────────────────────────────────────────────────── */
+.modal-overlay {
+  animation: fadeIn 0.15s ease both;
+}
+.modal-box {
+  animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Progress bars ─────────────────────────────────────────────────────────── */
+@keyframes barGrow {
+  from { width: 0 !important; }
+}
+.animated-bar {
+  animation: barGrow 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.2s;
+}
+
+/* ── Light theme transition ────────────────────────────────────────────────── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+/* Exclude elements where transition interferes */
+svg *, button, input, select, .spinner {
+  transition: none;
+}
+button { transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease; }

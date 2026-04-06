@@ -1,0 +1,14 @@
+.sidebar { width: 220px; flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 28px 0; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 10; }
+.logo { padding: 0 24px 28px; font-family: var(--font-d); font-size: 22px; font-weight: 600; color: var(--amber); display: flex; align-items: center; gap: 10px; }
+.logoIcon { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--amber-d), var(--amber)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logoIcon svg { width: 16px; height: 16px; }
+.sectionLabel { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; color: var(--text3); text-transform: uppercase; padding: 0 24px 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.sectionLabel.spaced { margin-top: 20px; }
+.navItem { display: flex; align-items: center; gap: 12px; padding: 10px 24px; font-size: 13px; font-weight: 400; color: var(--text2); cursor: pointer; border: none; border-left: 2px solid transparent; background: none; width: 100%; text-align: left; transition: all 0.15s; font-family: var(--font-s); }
+.navItem:hover { color: var(--text1); background: rgba(255,255,255,0.04); }
+.navItem.active { color: var(--amber); border-left-color: var(--amber); background: rgba(245,166,35,0.06); }
+.bottomArea { margin-top: auto; padding: 20px 24px; }
+.userChip { display: flex; align-items: center; gap: 10px; background: var(--card2); border-radius: 10px; padding: 10px 12px; border: 1px solid var(--border); }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #a78bfa); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: white; flex-shrink: 0; }
+.userName { font-size: 12px; font-weight: 500; color: var(--text1); }
+.userRole { font-size: 11px; color: var(--text3); }
